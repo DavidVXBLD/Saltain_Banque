@@ -1,73 +1,33 @@
     <?php 
+    require "Data/acounts.php";
     include "template/header.php"; 
     include "template/nav.php";
+    $accounts = get_accounts();
+
     ?>
+
+    <!-- ###############################################   LAYER   ###################################################### -->
+  <div id="layer" class="text-white bg-dark h-100 w-100 position-fixed"></div>
+  <section id="infosBlock" class="container bg-light position-fixed p-0">
+    <h2 id="infosTitle" class="col-12 p-2 m-0 bg-danger text-center">chargement.</h2>
+    <p id="infosText" class="m-2">chargement.</p>
+    <button id="infosButton" class="m-2">J'ai compris</button>
+  </section>
   
-  <!-- ###############################################    MAIN   ###################################################### -->
-  <main class="container my-4">
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-6">
-        <article class="d-flex border my-2">
-          <section class="w-50 p-2 d-flex flex-column justify-content-between">
-            <h2 class="accountTitle">Compte n°1</h2>
-            <h3>Solde: 2000€</h3>
-          </section>
-          <aside class="w-50">
-            <ul class="list-group text-center">
-              <li class="list-group-item"><button type="button" class="btn btn-secondary">Dépôt</button></li>
-              <li class="list-group-item"><button type="button" class="btn btn-secondary">Retrait</button></li>
-              <li class="list-group-item"><button type="button" class="btn btn-danger">Supprimer</button></li>
-            </ul>
-          </aside>
-        </article>
-      </div>
-      <div class="col-12 col-md-6 col-lg-6">
-        <article class="d-flex border my-2">
-          <section class="w-50 p-2 d-flex flex-column justify-content-between">
-            <h2 class="accountTitle">Compte n°2</h2>
-            <h3>Solde: 2000€</h3>
-          </section>
-          <aside class="w-50">
-            <ul class="list-group text-center">
-              <li class="list-group-item"><button type="button" class="btn btn-secondary">Dépôt</button></li>
-              <li class="list-group-item"><button type="button" class="btn btn-secondary">Retrait</button></li>
-              <li class="list-group-item"><button type="button" class="btn btn-danger">Supprimer</button></li>
-            </ul>
-          </aside>
-        </article>
-      </div>
-      <div class="col-12 col-md-6 col-lg-6">
-        <article class="d-flex border my-2">
-          <section class="w-50 p-2 d-flex flex-column justify-content-between">
-            <h2 class="accountTitle">Compte n°3</h2>
-            <h3>Solde: 2000€</h3>
-          </section>
-          <aside class="w-50">
-            <ul class="list-group text-center">
-              <li class="list-group-item"><button type="button" class="btn btn-secondary">Dépôt</button></li>
-              <li class="list-group-item"><button type="button" class="btn btn-secondary">Retrait</button></li>
-              <li class="list-group-item"><button type="button" class="btn btn-danger">Supprimer</button></li>
-            </ul>
-          </aside>
-        </article>
-      </div>
-      <div class="col-12 col-md-6 col-lg-6">
-        <article class="d-flex border my-2">
-          <section class="w-50 p-2 d-flex flex-column justify-content-between">
-            <h2 class="accountTitle">Compte n°4</h2>
-            <h3 class="mt-4">Solde: 2000€</h3>
-          </section>
-          <aside class="w-50">
-            <ul class="list-group text-center">
-              <li class="list-group-item"><button type="button" class="btn btn-secondary">Dépôt</button></li>
-              <li class="list-group-item"><button type="button" class="btn btn-secondary">Retrait</button></li>
-              <li class="list-group-item"><button type="button" class="btn btn-danger">Supprimer</button></li>
-            </ul>
-          </aside>
-        </article>
-      </div>
-    </div>
-  </main>
+
+<section class="d-flex col-12 flex-wrap justify-content-center pt-3 justify-content-md-around pt-md-5">
+
+    <?php
+    foreach ($accounts as $account) {
+        echo "<ul class=\"account col-3\">";
+        foreach ($account as $arg) {
+            echo "<li class=\"detailAccount\"> $arg </li>";
+        }
+        echo "</ul>";
+    }
+    ?>
+
+</section>
   
   <?php 
     include "template/footer.php"; 
