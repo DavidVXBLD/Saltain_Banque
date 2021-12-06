@@ -1,49 +1,22 @@
-{
-    "Information" : [
-        {
-            "Raison Sociale" : "ESSILORLUXOTTICA",
-            "Valeur" : "178.90",
-            "Variation" : "+3.49%"
-        },
-        {
-            "Raison Sociale" : "AXA",
-            "Valeur" : "25.16",
-            "Variation" : "+3.05%"
-        },
-        {
-            "Raison Sociale" : "SOCIETE GENERALE",
-            "Valeur" : "28.84",
-            "Variation" : "+1.76%"
-
-        },       
-        {
-            "Raison Sociale" : "SAFRAN",
-            "Valeur" : "16.04",
-            "Variation" : "+1.72%"
-
-        },
-        {
-            "Raison Sociale" : "WORLDLINE",
-            "Valeur" : "50.38",
-            "Variation" : "-3.58%"
-        },
-        {
-            "Raison Sociale" : "SAINT-GOBAIN",
-            "Valeur" : "59.56",
-            "Variation" : "-2.18%"
-
-        },       
-        {
-            "Raison Sociale" : "VEOLIA",
-            "Valeur" : "28.23",
-            "Variation" : "-1.84%"
-
-        },
-        {
-            "Raison Sociale" : "AIRBUS",
-            "Valeur" : "110.60",
-            "Variation" : "-1.25%"
-        }
-
-    ]
-}
+[
+    {
+      "name": "Taux d'emprunt",
+      "value": 1.15,
+      "variation": "+0.05"
+    },
+    {
+      "name": "CAC 40",
+      "value": 5000,
+      "variation": "-1.5%"
+    },
+    {
+      "name": "Croissance",
+      "value": "/",
+      "variation": "-2.5%"
+    },
+    {
+      "name": "Dette publique",
+      "value": "94%/PIB",
+      "variation": "+1.75"
+    }
+  ]
